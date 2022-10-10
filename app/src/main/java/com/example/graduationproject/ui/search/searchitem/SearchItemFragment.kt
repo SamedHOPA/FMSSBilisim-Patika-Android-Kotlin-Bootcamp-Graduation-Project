@@ -14,6 +14,7 @@ import com.example.graduationproject.model.general.GeneralModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.util.*
 import kotlin.collections.ArrayList
 
 class SearchItemFragment : Fragment() {
@@ -32,21 +33,21 @@ class SearchItemFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.SearchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
-            override fun onQueryTextSubmit(query: String?): Boolean {
+            override fun onQueryTextSubmit(query: String): Boolean {
                 return false
             }
 
-            override fun onQueryTextChange(newText: String?): Boolean {
-                if (newText != null) {
-                    filter(newText)
-                }
+            override fun onQueryTextChange(newText: String): Boolean {
+                filter(newText)
                 return false
             }
-
         })
     }
 
     fun filter(newText: String){
+        val sharedPreferences = activity?.getSharedPreferences("detail_content", Context.MODE_PRIVATE)
+        val editor = sharedPreferences?.edit()
+
         TravelApi.retrofitService.getTravel().enqueue(object : Callback<List<GeneralModel>> {
             override fun onResponse(
                 call: Call<List<GeneralModel>>,
@@ -54,9 +55,7 @@ class SearchItemFragment : Fragment() {
             ) {
                 val list = ArrayList(response.body()!!)
 
-                val sharedPreferences = activity?.getSharedPreferences("mars_content", Context.MODE_PRIVATE)
-                val editor = sharedPreferences?.edit()
-                val filterList = list.filter { it.title.contains(newText)}
+                val filterList = list.filter { it.title.lowercase().contains(newText.lowercase())}
                 val adapter = SearchItemAdapter(filterList
                 ){
                     findNavController().apply {

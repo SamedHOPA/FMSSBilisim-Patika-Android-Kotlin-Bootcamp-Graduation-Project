@@ -30,7 +30,11 @@
         android:id="@+id/trip_page"
         android:name="com.example.graduationproject.ui.trip.TripFragment"
         android:label="fragment_trip"
-        tools:layout="@layout/fragment_trip" />
+        tools:layout="@layout/fragment_trip" >
+        <action
+            android:id="@+id/action_trip_page_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/guide_page"
         android:name="com.example.graduationproject.ui.guide.GuideFragment"

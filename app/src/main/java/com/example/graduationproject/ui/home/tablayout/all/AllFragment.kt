@@ -34,14 +34,15 @@ class AllFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val sharedPreferences = activity?.getSharedPreferences("detail_content", Context.MODE_PRIVATE)
+        val editor = sharedPreferences?.edit()
+
         TravelApi.retrofitService.getTravel().enqueue(object : Callback<List<GeneralModel>>{
             @SuppressLint("CommitPrefEdits")
             override fun onResponse(
                 call: Call<List<GeneralModel>>,
                 response: Response<List<GeneralModel>>
             ) {
-                val sharedPreferences = activity?.getSharedPreferences("mars_content", Context.MODE_PRIVATE)
-                val editor = sharedPreferences?.edit()
                 val list = ArrayList(response.body()!!)
 
                 val category = "hotel"

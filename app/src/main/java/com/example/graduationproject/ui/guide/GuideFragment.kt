@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.graduationproject.BR
 import com.example.graduationproject.R
@@ -38,20 +39,21 @@ class GuideFragment : Fragment() {
             }
         }
 
+        val sharedPreferences = activity?.getSharedPreferences("detail_content", Context.MODE_PRIVATE)
+        val editor = sharedPreferences?.edit()
+
         TravelApi.retrofitService.getTravel().enqueue(object : Callback<List<GeneralModel>> {
             override fun onResponse(
                 call: Call<List<GeneralModel>>,
                 response: Response<List<GeneralModel>>
             ) {
-                val sharedPreferences = activity?.getSharedPreferences("mars_content", Context.MODE_PRIVATE)
-                val editor = sharedPreferences?.edit()
                 val list = ArrayList(response.body()!!)
 
                 val category = "mightneed"
                 val category2 = "toppick"
                 val filterList = list.filter { it.category == category}
                 val filterList2 = list.filter { it.category == category2 }
-                val adapter2 = ToppickAdapter(filterList
+                val adapter = MightneedAdapter(filterList
                 ){
                     findNavController().apply {
                         navigate(R.id.action_guide_page_to_detailFragment)
@@ -65,7 +67,8 @@ class GuideFragment : Fragment() {
                     editor?.apply()
                 }
 
-                val adapter = MightneedAdapter(filterList2){
+                val adapter2 = ToppickAdapter(filterList2
+                ){
                     findNavController().apply {
                         navigate(R.id.action_guide_page_to_detailFragment)
                     }
@@ -77,8 +80,8 @@ class GuideFragment : Fragment() {
                     editor?.putString("img_src", it.images[0].url)
                     editor?.apply()
                 }
-                guideBinding.setVariable(BR.adapter2,adapter2)
                 guideBinding.setVariable(BR.adapter,adapter)
+                guideBinding.setVariable(BR.adapter2,adapter2)
             }
 
             override fun onFailure(call: Call<List<GeneralModel>>, t: Throwable) {
@@ -95,7 +98,7 @@ class GuideFragment : Fragment() {
 
                 val adapter3 = GuideCategoryAdapter(list2
                 ){
-
+                    Toast.makeText(activity, "Clicked "+ it.title, Toast.LENGTH_SHORT).show()
                 }
 
                 guideBinding.setVariable(BR.adapter3,adapter3)

@@ -55,7 +55,7 @@
             android:layout_marginStart="@dimen/_21sdp"
             android:layout_marginTop="@dimen/_20sdp"
             android:layout_marginBottom="@dimen/_3sdp"
-            app:layout_constraintBottom_toTopOf="@id/searchBottom"
+            app:layout_constraintBottom_toTopOf="@id/AddBookmarkBottom"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/Detail_country">
             <TextView
@@ -92,7 +92,7 @@
             app:layout_constraintBottom_toBottomOf="@id/imgDetail"/>
 
         <Button
-            android:id="@+id/searchBottom"
+            android:id="@+id/AddBookmarkBottom"
             style="@style/DetailAddButtonStyle"
             app:shapeAppearanceOverlay="@style/DetailAddButtonStyle"
             android:layout_width="@dimen/_237sdp"
