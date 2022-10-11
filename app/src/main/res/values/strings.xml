@@ -21,4 +21,7 @@
     <string name="top_destinations">Top Destinations</string>
     <string name="nearby_attractions">Nearby Attractions</string>
     <string name="trip_plan">Trip Plan</string>
+    <string name="add_trips">Add Trips</string>
+    <string name="travel_start">Travel Start</string>
+    <string name="travel_end">Travel End</string>
 </resources>

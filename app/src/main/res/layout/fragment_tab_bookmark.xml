@@ -6,7 +6,7 @@
     <data>
         <variable
             name="adapter"
-            type="com.example.graduationproject.BookmarkAdapter" />
+            type="com.example.graduationproject.ui.trip.tablayout.bookmark.BookmarkAdapter" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -31,7 +31,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            tools:listitem="@layout/nearby_attractions_recyclerview_item" />
+            tools:listitem="@layout/bookmark_recycler_item" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

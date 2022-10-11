@@ -5,12 +5,12 @@
 
     <data>
         <variable
-            name="bookModel"
-            type="com.example.graduationproject.BookmarkModel" />
+            name="tripModel"
+            type="com.example.graduationproject.model.trip.TripModel" />
     </data>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/bookmark_card_view"
+        android:id="@+id/trip_card_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardUseCompatPadding="true"
@@ -24,7 +24,7 @@
             android:layout_height="@dimen/_118sdp">
 
             <ImageView
-                android:id="@+id/bookmark_image"
+                android:id="@+id/trip_image"
                 android:layout_width="@dimen/_275sdp"
                 android:layout_height="@dimen/_118sdp"
                 android:scaleType="fitXY"
@@ -34,10 +34,10 @@
                 tools:layout_editor_absoluteY="0dp" />
 
             <TextView
-                android:id="@+id/bookmark_country"
+                android:id="@+id/trip_country"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{bookModel.country}"
+                android:text="@{tripModel.country}"
                 android:fontFamily="@font/source_sans_pro"
                 android:textStyle="bold"
                 android:textColor="@color/home_button_text_color"
@@ -45,15 +45,15 @@
                 android:layout_marginStart="@dimen/_6sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_35sdp"
-                app:layout_constraintStart_toStartOf="@+id/bookmark_image"
-                app:layout_constraintEnd_toEndOf="@+id/bookmark_image"
-                app:layout_constraintTop_toTopOf="@+id/bookmark_image"/>
+                app:layout_constraintStart_toStartOf="@+id/trip_image"
+                app:layout_constraintEnd_toEndOf="@+id/trip_image"
+                app:layout_constraintTop_toTopOf="@+id/trip_image"/>
 
             <TextView
-                android:id="@+id/bookmark_city"
+                android:id="@+id/trip_city"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{bookModel.city}"
+                android:text="@{tripModel.city}"
                 android:fontFamily="@font/source_sans_pro"
                 android:textStyle="bold"
                 android:textColor="@color/home_button_text_color"
@@ -61,9 +61,41 @@
                 android:layout_marginStart="@dimen/_6sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_62sdp"
-                app:layout_constraintStart_toStartOf="@+id/bookmark_image"
-                app:layout_constraintEnd_toEndOf="@+id/bookmark_image"
-                app:layout_constraintTop_toTopOf="@+id/bookmark_image" />
+                app:layout_constraintStart_toStartOf="@+id/trip_image"
+                app:layout_constraintEnd_toEndOf="@+id/trip_image"
+                app:layout_constraintTop_toTopOf="@+id/trip_image" />
+
+            <TextView
+                android:id="@+id/trip_date1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{tripModel.date1}"
+                android:fontFamily="@font/source_sans_pro"
+                android:textStyle="bold"
+                android:textColor="@color/home_button_text_color"
+                android:textSize="@dimen/_13ssp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_90sdp"
+                app:layout_constraintStart_toStartOf="@+id/trip_image"
+                app:layout_constraintEnd_toEndOf="@+id/trip_date2"
+                app:layout_constraintTop_toTopOf="@+id/trip_image" />
+
+            <TextView
+                android:id="@+id/trip_date2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{tripModel.date2}"
+                android:fontFamily="@font/source_sans_pro"
+                android:textStyle="bold"
+                android:textColor="@color/home_button_text_color"
+                android:textSize="@dimen/_13ssp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_90sdp"
+                app:layout_constraintStart_toStartOf="@+id/trip_date1"
+                app:layout_constraintEnd_toEndOf="@+id/trip_image"
+                app:layout_constraintTop_toTopOf="@+id/trip_image" />
 
 
             <ImageButton
@@ -75,9 +107,9 @@
                 android:layout_marginStart="@dimen/_244sdp"
                 android:layout_marginTop="@dimen/_9sdp"
                 android:layout_marginEnd="@dimen/_9sdp"
-                app:layout_constraintEnd_toEndOf="@+id/bookmark_image"
-                app:layout_constraintStart_toStartOf="@+id/bookmark_image"
-                app:layout_constraintTop_toTopOf="@+id/bookmark_image" />
+                app:layout_constraintEnd_toEndOf="@+id/trip_image"
+                app:layout_constraintStart_toStartOf="@+id/trip_image"
+                app:layout_constraintTop_toTopOf="@+id/trip_image" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

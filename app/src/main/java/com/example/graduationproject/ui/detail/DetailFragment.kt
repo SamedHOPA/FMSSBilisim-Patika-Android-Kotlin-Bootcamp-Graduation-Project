@@ -7,9 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import com.example.graduationproject.BookmarkDatabase
-import com.example.graduationproject.BookmarkModel
+import com.example.graduationproject.data.BookmarkDatabase
+import com.example.graduationproject.model.bookmark.BookmarkModel
 import com.example.graduationproject.databinding.FragmentDetailBinding
 import com.squareup.picasso.Picasso
 
@@ -48,11 +47,6 @@ class DetailFragment : Fragment() {
             AddBookmarkBottom.setOnClickListener {
                 val bookmark = BookmarkModel(0,title.toString(),country.toString(),city.toString(),description.toString(),imgUrl.toString())
                 bookmarkDatabase?.bookmarkDao()?.insert(bookmark)
-            }
-            likeIcon.setOnClickListener {
-                /*val delete = BookmarkModel(0,title.toString(),country.toString(),city.toString(),description.toString(),imgUrl.toString())
-                bookmarkDatabase?.bookmarkDao()?.delete(delete)
-                Toast.makeText(activity, "deleted", Toast.LENGTH_SHORT).show()*/
             }
         }
     }

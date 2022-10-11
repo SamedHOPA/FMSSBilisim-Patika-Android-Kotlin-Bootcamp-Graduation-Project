@@ -1,4 +1,4 @@
-package com.example.graduationproject
+package com.example.graduationproject.ui.trip.tablayout.trips
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,18 +6,20 @@ import android.widget.ImageView
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
-import com.example.graduationproject.databinding.BookmarkRecyclerItemBinding
-import com.example.graduationproject.databinding.NearbyAttractionsRecyclerviewItemBinding
+import com.example.graduationproject.BR
+import com.example.graduationproject.R
+import com.example.graduationproject.databinding.TabTripRecyclerItemBinding
+import com.example.graduationproject.model.trip.TripModel
 import com.squareup.picasso.Picasso
 
-class BookmarkAdapter(
-    private val list:  List<BookmarkModel>,
-    private val onItemClickHandler: (bookmarkModel: BookmarkModel) -> Unit
+class TripAddAdapter (
+    private val list:  List<TripModel>,
+    private val onItemClickHandler: (tripModel: TripModel) -> Unit
 ): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val travelBinding = DataBindingUtil.inflate<ViewDataBinding>(
             LayoutInflater.from(parent.context),
-            R.layout.bookmark_recycler_item, parent, false
+            R.layout.tab_trip_recycler_item, parent, false
         )
         return TravelViewHolder(travelBinding)
     }
@@ -25,15 +27,15 @@ class BookmarkAdapter(
     class TravelViewHolder(
         private val travelBinding: ViewDataBinding
     ) : RecyclerView.ViewHolder(travelBinding.root) {
-        private val image by lazy { itemView.findViewById<ImageView>(R.id.bookmark_image) }
+        private val image by lazy { itemView.findViewById<ImageView>(R.id.trip_image) }
         fun onBind(
-            bookmarkModel: BookmarkModel,
-            onItemClickHandler: (bookmarkModel: BookmarkModel) -> Unit
+            tripModel: TripModel,
+            onItemClickHandler: (tripModel: TripModel) -> Unit
         ) {
-            val binding = travelBinding as BookmarkRecyclerItemBinding
-            binding.setVariable(BR.bookModel, bookmarkModel)
-            Picasso.get().load(bookmarkModel.images).into(image)
-            binding.bookmarkCardView.setOnClickListener { onItemClickHandler(bookmarkModel) }
+            val binding = travelBinding as TabTripRecyclerItemBinding
+            binding.setVariable(BR.tripModel, tripModel)
+            Picasso.get().load(tripModel.images).into(image)
+            binding.tripCardView.setOnClickListener { onItemClickHandler(tripModel) }
         }
     }
 

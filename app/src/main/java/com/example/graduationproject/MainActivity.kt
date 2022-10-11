@@ -29,6 +29,8 @@ class MainActivity : AppCompatActivity() {
             when (destination.id) {
                 R.id.detailFragment -> binding.bottomNav.visibility = View.GONE
                 R.id.searchItemFragment -> binding.bottomNav.visibility = View.GONE
+                R.id.tripAddListFragment -> binding.bottomNav.visibility = View.GONE
+                R.id.tripAddDetailFragment -> binding.bottomNav.visibility = View.GONE
                 else -> binding.bottomNav.visibility = View.VISIBLE
             }
         }

@@ -53,7 +53,9 @@
         <entry key="..\:/Users/samet/Desktop/fmss/FMSSBilisim-Patika-Android-Kotlin-Bootcamp-Graduation-Project/app/src/main/res/layout/fragment_tab_bookmark.xml" value="0.17954815695600476" />
         <entry key="..\:/Users/samet/Desktop/fmss/FMSSBilisim-Patika-Android-Kotlin-Bootcamp-Graduation-Project/app/src/main/res/layout/fragment_tab_trip.xml" value="0.1" />
         <entry key="..\:/Users/samet/Desktop/fmss/FMSSBilisim-Patika-Android-Kotlin-Bootcamp-Graduation-Project/app/src/main/res/layout/fragment_transportations.xml" value="0.17954815695600476" />
-        <entry key="..\:/Users/samet/Desktop/fmss/FMSSBilisim-Patika-Android-Kotlin-Bootcamp-Graduation-Project/app/src/main/res/layout/fragment_trip.xml" value="0.25" />
+        <entry key="..\:/Users/samet/Desktop/fmss/FMSSBilisim-Patika-Android-Kotlin-Bootcamp-Graduation-Project/app/src/main/res/layout/fragment_trip.xml" value="0.176" />
+        <entry key="..\:/Users/samet/Desktop/fmss/FMSSBilisim-Patika-Android-Kotlin-Bootcamp-Graduation-Project/app/src/main/res/layout/fragment_trip_add_detail.xml" value="0.1902497027348395" />
+        <entry key="..\:/Users/samet/Desktop/fmss/FMSSBilisim-Patika-Android-Kotlin-Bootcamp-Graduation-Project/app/src/main/res/layout/fragment_trip_add_list.xml" value="0.1902497027348395" />
         <entry key="..\:/Users/samet/Desktop/fmss/FMSSBilisim-Patika-Android-Kotlin-Bootcamp-Graduation-Project/app/src/main/res/layout/guide_categories_item.xml" value="0.264" />
         <entry key="..\:/Users/samet/Desktop/fmss/FMSSBilisim-Patika-Android-Kotlin-Bootcamp-Graduation-Project/app/src/main/res/layout/might_need_these_recyclerview_item.xml" value="0.1902497027348395" />
         <entry key="..\:/Users/samet/Desktop/fmss/FMSSBilisim-Patika-Android-Kotlin-Bootcamp-Graduation-Project/app/src/main/res/layout/nearby_attractions_recyclerview_item.xml" value="0.18945699564011098" />
@@ -61,6 +63,7 @@
         <entry key="..\:/Users/samet/Desktop/fmss/FMSSBilisim-Patika-Android-Kotlin-Bootcamp-Graduation-Project/app/src/main/res/layout/tab_layout_all_reyclerview_item.xml" value="0.1" />
         <entry key="..\:/Users/samet/Desktop/fmss/FMSSBilisim-Patika-Android-Kotlin-Bootcamp-Graduation-Project/app/src/main/res/layout/tab_layout_recyclerview_item.xml" value="0.1" />
         <entry key="..\:/Users/samet/Desktop/fmss/FMSSBilisim-Patika-Android-Kotlin-Bootcamp-Graduation-Project/app/src/main/res/layout/tab_layout_reyclerview_item.xml" value="0.18654131618010886" />
+        <entry key="..\:/Users/samet/Desktop/fmss/FMSSBilisim-Patika-Android-Kotlin-Bootcamp-Graduation-Project/app/src/main/res/layout/tab_trip_recycler_item.xml" value="0.1902497027348395" />
         <entry key="..\:/Users/samet/Desktop/fmss/FMSSBilisim-Patika-Android-Kotlin-Bootcamp-Graduation-Project/app/src/main/res/layout/tab_trip_recyler_item.xml" value="0.18945699564011098" />
         <entry key="..\:/Users/samet/Desktop/fmss/FMSSBilisim-Patika-Android-Kotlin-Bootcamp-Graduation-Project/app/src/main/res/layout/top_destinations_recycler_item.xml" value="0.1" />
         <entry key="..\:/Users/samet/Desktop/fmss/FMSSBilisim-Patika-Android-Kotlin-Bootcamp-Graduation-Project/app/src/main/res/layout/top_destinations_reycler_item.xml" value="0.1902497027348395" />

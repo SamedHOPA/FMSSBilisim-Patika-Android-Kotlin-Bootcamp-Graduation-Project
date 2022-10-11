@@ -1,9 +1,10 @@
-package com.example.graduationproject
+package com.example.graduationproject.data.remote
 
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
+import com.example.graduationproject.model.bookmark.BookmarkModel
 
 @Dao
 interface BookmarkDAO {

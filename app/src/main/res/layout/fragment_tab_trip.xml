@@ -6,50 +6,32 @@
     <data>
         <variable
             name="adapter"
-            type="com.example.graduationproject.BookmarkAdapter" />
+            type="com.example.graduationproject.ui.trip.tablayout.trips.TripAddAdapter" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.trip.tablayout.bookmark.TabTripFragment"
-        android:id="@+id/bookmark_fragment">
+        tools:context=".ui.trip.tablayout.trips.TabTripFragment"
+        android:id="@+id/trip_fragment">
 
-        <ScrollView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/trip_recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_400sdp"
+            android:layout_height="match_parent"
             android:layout_marginStart="@dimen/_12sdp"
             android:layout_marginTop="@dimen/_9sdp"
             android:layout_marginEnd="@dimen/_12sdp"
             android:layout_marginBottom="@dimen/_9sdp"
+            android:adapter="@{adapter}"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/tab_trip_recyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adapter="@{adapter}"
-                android:orientation="vertical"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:layout_constraintHorizontal_bias="1.0"
-                tools:listitem="@layout/tab_trip_recyler_item" />
-
-        </ScrollView>
-
-        <ImageButton
-            android:id="@+id/trip_add_bottom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_add_trip"
-            android:backgroundTint="@android:color/transparent"
-            android:layout_marginBottom="@dimen/_1sdp"
-            android:layout_marginStart="@dimen/_127sdp"
-            android:layout_marginEnd="@dimen/_127sdp"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            />
+            tools:listitem="@layout/tab_trip_recycler_item" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

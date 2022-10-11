@@ -6,10 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.navigation.fragment.findNavController
 import com.example.graduationproject.*
+import com.example.graduationproject.data.BookmarkDatabase
 import com.example.graduationproject.databinding.FragmentTabBookmarkBinding
+import com.example.graduationproject.model.bookmark.BookmarkModel
 
 class TabBookmarkFragment : Fragment() {
 
@@ -45,7 +46,5 @@ class TabBookmarkFragment : Fragment() {
         }
 
         binding.setVariable(BR.adapter,adapter)
-
-
     }
 }
